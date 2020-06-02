@@ -27,7 +27,6 @@ class _LoginState extends State<Login> {
   bool hidePassword = true;
 
 
-  @override
   Widget build(BuildContext context) {
     final user = Provider.of<UserProvider>(context);
     return Scaffold(
@@ -89,8 +88,9 @@ class _LoginState extends State<Login> {
                                       if (!regex.hasMatch(value))
                                         return 'Please make sure your email address is valid';
                                       else
-                                        return null;;
+                                        return null;
                                     }
+                                    return null;
                                   },
                                 ),
                               ),
